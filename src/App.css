@@ -1,0 +1,122 @@
+.customShadow{
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+/* User Table */
+.userTable{
+    @apply bg-white
+}
+.userTable th{
+@apply border text-base font-medium
+}
+.userTable td{
+@apply border text-base text-center
+}
+
+/* Scrollbar hidden */
+.scrollbar-none::-webkit-scrollbar {
+    display:none;
+}
+
+.loader {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bubble {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ff3d71;
+    animation: bubble 2s infinite ease-in-out;
+  }
+  
+  .bubble:nth-child(1) {
+    animation-delay: 0s;
+    top: 60px;
+    left: 30px;
+    animation: bubble 2s infinite, orbit 4s infinite;
+  }
+  
+  .bubble:nth-child(2) {
+    animation-delay: 0.5s;
+    top: 30px;
+    left: 90px;
+    animation: bubble 2s infinite 0.5s, orbit 4s infinite 0.5s;
+  }
+  
+  .bubble:nth-child(3) {
+    animation-delay: 1s;
+    top: 60px;
+    left: 120px;
+    animation: bubble 2s infinite 1s, orbit 4s infinite 1s;
+  }
+  
+  .bubble:nth-child(4) {
+    animation-delay: 1.5s;
+    top: 90px;
+    left: 90px;
+    animation: bubble 2s infinite 1.5s, orbit 4s infinite 1.5s;
+  }
+  
+  .bubble:nth-child(5) {
+    animation-delay: 2s;
+    top: 120px;
+    left: 30px;
+    animation: bubble 2s infinite 2s, orbit 4s infinite 2s;
+  }
+  
+  @keyframes bubble {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1) rotate(360deg);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0) rotate(720deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg) translate(60px);
+    }
+    100% {
+      transform: rotate(360deg) translate(60px);
+    }
+  }
+  
+  .animate-gradient-move {
+    background-size: 400px 400px;
+    animation: gradient-move 1.5s infinite;
+  }
+  
+  @keyframes gradient-move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 200px 0;
+    }
+  }
+  
+
+  .animate-fade-in {
+    @apply opacity-100;
+    transition: opacity 500ms;
+  }
+  
+  .animate-fade-out {
+    @apply opacity-0;
+    transition: opacity 500ms;
+  }
+  
